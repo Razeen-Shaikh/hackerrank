@@ -1,13 +1,19 @@
-#!/bin/python3
-
-import math
+"""
+This module contains the implementation of the solve function.
+"""
 import os
-import random
-import re
-import sys
 
 # Complete the solve function below.
 def solve(s):
+    """
+    Capitalizes the first letter of each word in the input string.
+
+    Args:
+    s (str): The input string to be capitalized.
+
+    Returns:
+    str: The capitalized input string.
+    """
     # Split the full name into individual words
     words = s.split(' ')  # Split based on spaces
     
@@ -20,12 +26,11 @@ def solve(s):
     return capitalized_full_name
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
+    fptr = open(os.environ['OUTPUT_PATH'], 'w', encoding='utf-8')
     s = input()
 
-    result = solve(s)
+    RESULT = solve(s)
 
-    fptr.write(result + '\n')
+    fptr.write(RESULT + '\n')
 
     fptr.close()
