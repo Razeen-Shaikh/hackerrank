@@ -8,8 +8,7 @@ def average(array):
     Returns:
         float: The average of the array.
     """
-    distint_array = set(array)
-    return sum(distint_array) / len(distint_array)
+    return sum(set(array)) / len(set(array))
 
 if __name__ == '__main__':
     n = int(input())
