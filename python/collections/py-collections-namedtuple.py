@@ -1,7 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import namedtuple
+
 N = int(input())
-Columns = input().split()
+Students = namedtuple("Students", input())
 total_marks = 0
 for i in range(N):
-    total_marks += int(input().split()[Columns.index("MARKS")])
+    student = Students(*(input().split()))
+    total_marks += int(student.MARKS)
 
 print(total_marks/N)
