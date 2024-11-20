@@ -9,4 +9,5 @@
 - **[Learn to code in 30 days](https://github.com/Razeen-Shaikh/hackerrank/tree/main/30-days-coding)**
 - **[Java](https://github.com/Razeen-Shaikh/hackerrank/tree/main/java)**
 - **[Python](https://github.com/Razeen-Shaikh/hackerrank/tree/main/python)**
+- **[SQL](https://github.com/Razeen-Shaikh/hackerrank/tree/main/sql)**
 - **[Interview Preparation Kits](https://github.com/Razeen-Shaikh/hackerrank/tree/main/interview-preparation-kits)**
