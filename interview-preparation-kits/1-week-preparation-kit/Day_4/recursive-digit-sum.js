@@ -32,22 +32,22 @@ function readLine() {
  */
 
 function superDigit(n, k) {
-  const digitSum = n.split("").reduce((sum, ch) => sum + parseInt(ch), 0);
+  const digitSum = n.split("").reduce((sum, ch) => sum + BigInt(ch), 0n);
 
-  const total = digitSum * k;
+  const total = digitSum * BigInt(k);
 
   const findSuperDigit = (x) => {
-    if (x < 10) {
+    if (x < 10n) {
       return x;
     }
     const nextSum = x
       .toString()
       .split("")
-      .reduce((sum, ch) => sum + parseInt(ch), 0);
+      .reduce((sum, ch) => sum + BigInt(ch), 0n);
     return findSuperDigit(nextSum);
   };
 
-  return findSuperDigit(total);
+  return Number(findSuperDigit(total));
 }
 
 function main() {
