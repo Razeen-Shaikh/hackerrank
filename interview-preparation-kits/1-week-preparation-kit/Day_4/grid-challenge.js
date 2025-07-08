@@ -1,25 +1,25 @@
-'use strict';
+"use strict";
 
-const fs = require('fs');
+const fs = require("fs");
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 /*
@@ -30,37 +30,38 @@ function readLine() {
  */
 
 function gridChallenge(grid) {
-    grid = grid.map((row) => row.split("").sort().join(""));
-    for (let i=0; i<grid.length-1; i++) {
-        for (let j=0; j<grid[0].length; j++) {
-            if (grid[i][j] > grid[i+1][j]) {
-                return "NO";
-            }
-        }
+  let newGrid = grid.map((row) => row.split("").sort().join(""));
+
+  for (let i = 0; i < newGrid.length - 1; i++) {
+    for (let j = 0; j < newGrid[0].length; j++) {
+      if (newGrid[i][j] > newGrid[i + 1][j]) {
+        return "NO";
+      }
     }
-    
-    return "YES";
+  }
+
+  return "YES";
 }
 
 function main() {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const t = parseInt(readLine().trim(), 10);
+  const t = parseInt(readLine().trim(), 10);
 
-    for (let tItr = 0; tItr < t; tItr++) {
-        const n = parseInt(readLine().trim(), 10);
+  for (let tItr = 0; tItr < t; tItr++) {
+    const n = parseInt(readLine().trim(), 10);
 
-        let grid = [];
+    let grid = [];
 
-        for (let i = 0; i < n; i++) {
-            const gridItem = readLine();
-            grid.push(gridItem);
-        }
-
-        const result = gridChallenge(grid);
-
-        ws.write(result + '\n');
+    for (let i = 0; i < n; i++) {
+      const gridItem = readLine();
+      grid.push(gridItem);
     }
 
-    ws.end();
+    const result = gridChallenge(grid);
+
+    ws.write(result + "\n");
+  }
+
+  ws.end();
 }
