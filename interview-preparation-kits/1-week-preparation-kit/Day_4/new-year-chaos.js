@@ -52,7 +52,7 @@ function main() {
     const n = parseInt(readLine().trim(), 10);
 
     const q = readLine()
-      .replace(/\s+$/g, "")
+      .trim()
       .split(" ")
       .map((qTemp) => parseInt(qTemp, 10));
 
