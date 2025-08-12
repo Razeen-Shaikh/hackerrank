@@ -1,7 +1,7 @@
-var Regex_Pattern = /^...\....\....\....$/g; //Do not delete '/' and 'g'. Replace __________ with your regex.
+const Regex_Pattern = /^...\....\....\....$/g; //Do not delete '/' and 'g'. Replace __________ with your regex.
 
 function processData(Test_String) {
-  var match = Regex_Pattern.test(Test_String);
+  const match = Regex_Pattern.test(Test_String);
   console.log(match);
 }
 
