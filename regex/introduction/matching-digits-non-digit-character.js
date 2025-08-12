@@ -1,4 +1,4 @@
-var Regex_Pattern = /\d\d\D\d\d\D\d\d\d\d/; //Do not delete '/'. Replace __________ with your regex.
+const Regex_Pattern = /\d\d\D\d\d\D\d\d\d\d/; //Do not delete '/'. Replace __________ with your regex.
 
 function processData(Test_String) {
   //Enter your code here
