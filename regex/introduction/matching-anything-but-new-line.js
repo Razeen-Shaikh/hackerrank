@@ -1,8 +1,7 @@
 var Regex_Pattern = /^...\....\....\....$/g; //Do not delete '/' and 'g'. Replace __________ with your regex.
 
 function processData(Test_String) {
-  var matches = Test_String.match(Regex_Pattern);
-  var match = matches != null && matches.length > 0;
+  var match = Regex_Pattern.test(Test_String);
   console.log(match);
 }
 
