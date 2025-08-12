@@ -3,7 +3,7 @@ var Regex_Pattern = /\S\S\s\S\S\s\S\S/; //Do not delete '/'. Replace __________ 
 function processData(Test_String) {
   //Enter your code here
 
-  console.log(!!Test_String.match(Regex_Pattern));
+  console.log(Regex_Pattern.test(Test_String));
 }
 
 process.stdin.resume();
