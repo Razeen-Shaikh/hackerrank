@@ -1,0 +1,18 @@
+const Regex_Pattern = /\S\S\s\S\S\s\S\S/; //Do not delete '/'. Replace __________ with your regex.
+
+function processData(Test_String) {
+  //Enter your code here
+
+  console.log(Regex_Pattern.test(Test_String));
+}
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+  _input += input;
+});
+
+process.stdin.on("end", function () {
+  processData(_input);
+});
