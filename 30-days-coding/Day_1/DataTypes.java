@@ -16,20 +16,9 @@ public class DataTypes {
         double t = scan.nextDouble();
         scan.nextLine();
         String r = scan.nextLine();
-        /* Declare second integer, double, and String variables. */
-
-        /* Read and save an integer, double, and String to your variables. */
-        // Note: If you have trouble reading the entire String, please go back and
-        // review the Tutorial closely.
         System.out.println(i + j);
-        /* Print the sum of both integer variables on a new line. */
         System.out.println(d + t);
-        /* Print the sum of the double variables on a new line. */
         System.out.println(s + r);
-        /*
-         * Concatenate and print the String variables on a new line; the 's' variable
-         * above should be printed first.
-         */
 
         scan.close();
     }
